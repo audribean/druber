@@ -1,0 +1,239 @@
+* {
+   margin: 0%;
+   padding: 0%; 
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 2vw;
+}
+
+/* NAV STYLING */
+.nav {
+    list-style-type: none;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.nav li {
+    display: block;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 1.4vw;
+    font-weight: 200;
+}
+
+.nav li:hover {
+    background-color: lightgray;
+    transition-duration: 0.5s;
+}
+
+#icon {
+    float: left;
+    letter-spacing: 0.2em;
+    display: block;
+    font-weight: bold;
+}
+
+/* GENERAL CONTAINER STYLING */
+.container {
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.container-item {
+    align-items: center;
+    justify-content: center;
+}
+
+/* HEADER STYLING */
+#header {
+    display: flex;
+    width: 100%;
+    background-image: url(assets/header-horizontal.jpeg);
+    background-size: cover;
+    height: 20em;
+}
+
+.tagline {
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 30%;
+    font-weight: 100;
+}
+
+.tagline h1 {
+    font-weight: 900;
+    letter-spacing: 0.1em;
+}
+
+.tagline a:hover {
+    color: rgb(218, 133, 28);
+    transition-duration: 0.5s;
+}
+
+.tagline p {
+    background-color: rgb(0,0,0,0.5);
+    border-radius: 5px;
+    padding: 3%;
+    color: white;
+}
+
+.find {
+    position: relative;
+    width: 70%;
+    text-align: center;
+    top: 40%;
+    left: 10%;
+    font-weight: bold;
+}
+
+input[type=text], select{
+    resize: horizontal;
+    width: 40%;
+    margin-top: 2%;
+    color: white;
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+    cursor: text;
+}
+
+/* MIDDLE SECTION STYLING */
+#middle {
+    justify-content: space-evenly;
+    margin-top: 2%;
+}
+
+.desc {
+    position: relative;
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+.hat {
+    padding-left: 5%;
+}
+
+/* BOTTOM SECTION STYLING */
+
+#bottom {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+} 
+
+#bottom img {
+    /* max-height: 10em; */
+    height: 20em;
+    border: 1px solid black;
+}
+
+.bottom-item h3 {
+    font-weight: 600;
+    text-align: center;
+}
+
+/* SMALL SCREEN STYLING */
+
+@media screen and (max-width: 700px) {
+    /* NAV STYLING */
+    .nav li {
+        font-size: 2vw;
+    }
+    /* Plan for mobile side menu:
+    - replace links on top with an icon according to whether the menu is open/closed (bool value?)
+    - open-menu icon onPress: trigger function to reveal overlay, display links in a column, make font sizes large and accessible
+    - closed-menu icon onPress: set display to none, only display the open-menu icon
+    - optional: animation to reveal/close overlay from the side
+    
+    */
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    /* HEADER STYLING */
+
+    #header {
+        display: block;
+        background-image: url(assets/header-vertical.jpeg);
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        color: white;
+        height: 30em;
+    }
+
+    .tagline {
+        width: 80%;
+        right: 10%;
+        margin-bottom: 10%;
+        font-weight: 100;
+    }
+
+    .tagline p {
+        background-color: rgb(0,0,0,0.7);
+    }
+    
+
+    .tagline h1 {
+        -webkit-text-stroke: 1px black;
+    }
+
+    .find {
+        width: 80%;
+        left: 10%;
+        right: 10%;
+        top: 15%;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .find h3{
+        background-color: rgb(0,0,0,0.7);
+        border-radius: 5px;
+        padding-left: 0%;
+        padding-right: 0%;
+        color: white;
+    }
+
+    .find h3:hover{
+        background-color: rgb(0,0,0,0.9);
+        transition-duration: 0.5s;
+    }
+
+    input[type=text], select{
+        width: 80%;
+        right: 10%;
+    }
+
+    /* MIDDLE STYLING */
+
+    #middle {
+        width: 80%;
+        text-align: center;
+        align-items: center;
+    }
+    .desc {
+        width: 100%;
+        left: 0%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .hat {
+        
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+  }
